@@ -8,7 +8,14 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+// ✅ Better CORS setup
+app.use(cors({
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
+app.options("*", cors());
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -23,6 +30,8 @@ mongoose
     .connect(process.env.MONGO_URI)
     .then(() => {
         console.log("✅ MongoDB connected");
-        app.listen(PORT, () => console.log(`✅ Server running: http://localhost:${PORT}`));
+        app.listen(PORT, () =>
+            console.log(`✅ Server running: http://localhost:${PORT}`)
+        );
     })
     .catch((err) => console.log("❌ MongoDB error:", err.message));
