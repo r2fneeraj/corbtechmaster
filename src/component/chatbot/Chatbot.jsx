@@ -41,11 +41,14 @@ export default function Chatbot() {
     // ✅ API call function (IMPORTANT: should be outside validation)
     const saveLeadToDB = async (finalLead) => {
         try {
-            const res = await fetch("http://localhost:5000/api/leads", {
+            const res = await fetch("/api/leads", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(finalLead)
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
             });
+
 
             return await res.json();
         } catch (err) {

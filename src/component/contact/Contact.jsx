@@ -70,7 +70,7 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/leads", {
+      const res = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
 
