@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+.leads-page {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    padding: 28px;
+    color: #06243b;
+    background: linear-gradient(180deg, #f7fbff 0%, #ffffff 70%);
+    min-height: 100vh;
+}
+
+.leads-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.leads-title h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.leads-title p {
+    margin: 6px 0 0;
+    color: rgba(6, 36, 59, 0.7);
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.leads-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn {
+    border: none;
+    cursor: pointer;
+    border-radius: 14px;
+    padding: 11px 15px;
+    font-weight: 800;
+    font-size: 13px;
+    transition: 0.2s ease;
+}
+
+.btn-primary {
+    color: white;
+    background: linear-gradient(135deg, #0c94dc, #2257a4);
+    box-shadow: 0 14px 35px rgba(19, 125, 197, 0.25);
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 18px 45px rgba(19, 125, 197, 0.35);
+}
+
+.btn-outline {
+    background: white;
+    color: #06243b;
+    border: 1px solid rgba(17, 137, 206, 0.25);
+}
+
+.btn-outline:hover {
+    border-color: rgba(12, 148, 220, 0.5);
+    box-shadow: 0 14px 30px rgba(12, 148, 220, 0.12);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(160, 172, 206, 0.28);
+    border-radius: 18px;
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+.leads-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 860px;
+}
+
+.leads-table thead tr {
+    background: linear-gradient(135deg, #cde0f0, #eaf4ff);
+}
+
+.leads-table th,
+.leads-table td {
+    padding: 14px 14px;
+    text-align: left;
+    font-size: 13px;
+}
+
+.leads-table th {
+    font-weight: 900;
+    color: #06243b;
+    letter-spacing: 0.2px;
+}
+
+.leads-table tbody tr {
+    border-top: 1px solid rgba(160, 172, 206, 0.18);
+    transition: background 0.2s ease;
+}
+
+.leads-table tbody tr:hover {
+    background: rgba(205, 224, 240, 0.35);
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 12px;
+    color: #06243b;
+    background: rgba(205, 224, 240, 0.9);
+    border: 1px solid rgba(17, 137, 206, 0.22);
+}
+
+.muted {
+    color: rgba(6, 36, 59, 0.65);
+}
+
+.state-box {
+    padding: 18px;
+    font-weight: 700;
+}
+
+.searchBox {
+    padding: 11px 14px;
+    border-radius: 14px;
+    border: 1px solid rgba(215, 232, 255, 1);
+    outline: none;
+    font-size: 13px;
+    min-width: 240px;
+}
+
+.searchBox:focus {
+    border-color: rgba(12, 148, 220, 0.6);
+    box-shadow: 0 0 0 5px rgba(10, 160, 226, 0.18);
+}
