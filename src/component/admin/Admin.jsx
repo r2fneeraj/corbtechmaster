@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Leads from "./Leads";
 
 function Admin() {
   return (
-    <div>Admin</div>
-  )
+    <div>
+      <Leads />
+    </div>
+  );
 }
 
-export default Admin
+export default Admin;
