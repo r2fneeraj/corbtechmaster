@@ -30,9 +30,17 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/safari" element={<Safari />} />
 
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/admin/dashboard" element={<Dashboard />} />
-        <Route path="/admin/leads" element={<Leads />} />
+        {/* ✅ ADMIN ROUTES (Nested) */}
+        <Route path="/admin" element={<Admin />}>
+          {/* ✅ when you open /admin */}
+          <Route index element={<Dashboard />} />
+
+          {/* ✅ /admin/dashboard */}
+          <Route path="dashboard" element={<Dashboard />} />
+
+          {/* ✅ /admin/leads */}
+          <Route path="leads" element={<Leads />} />
+        </Route>
       </Routes>
 
       {/* ✅ Show chatbot only on main website pages */}
